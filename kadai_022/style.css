@@ -1,0 +1,91 @@
+h1, p, body {
+  margin: 0 auto;
+}
+
+p, a {
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  display: flex;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(255, 255, 255); /* h1の文字色を rgb(255, 255, 255) に */
+}
+
+main {
+  padding: 10px;
+}
+
+#parent {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.contents {
+ border: 3px solid rgb(238, 204, 204); /* 線（太さ3px、実線、色） */
+  flex-basis: 25%; /* 幅を親要素の25%に */
+  padding: 10px 15px; /* 内側の余白：上下10px、左右15px */
+  margin: 20px 0; /* 外側の余白：上下20px、左右0 */
+}
+
+h2 {
+  font-size: 25px; /* フォントサイズを25pxに */
+  border-bottom: 3px dotted rgb(236, 122, 122); /* 下線（太さ3px、点線、色） */
+}
+
+h2::before {
+  content: "●"; /* 記号を表示 */
+  color: rgb(239, 111, 139); /* 記号の色 */
+}
+
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold; /* 太字 */
+  color: rgb(97, 206, 249); /* 文字色 */
+}
+
+.contents img {
+  margin: 10px 0; /* 上下10px、左右0の余白 */
+  width: 70%; /* 幅を70%に */
+  display: block; /* imgをブロック要素にする */
+  margin-left: auto; /* 左のマージンを自動で */
+  margin-right: auto; /* 右のマージンを自動で */
+
+}
+
+footer {
+  background-color: rgb(244, 79, 79); /* 背景色 */
+  text-align: center; /* テキスト要素がある場合も中央揃え */
+}
+
+footer a {
+  color: rgb(255, 255, 255); /* 通常のリンク文字色 */
+  text-decoration: none; /* 下線を消す（必要に応じて） */
+}
+
+footer a:visited {
+  color: rgb(193, 234, 251); /* 訪問済みリンクの文字色 */
+}
+
+footer a:hover {
+  color: rgb(245, 178, 168); /* マウスホバー時の文字色 */
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px; /* h2のフォントサイズを30pxに */
+  }
+
+  p {
+    font-size: 25px; /* pのフォントサイズを25pxに */
+  }
+
+  #parent {
+    flex-direction: column; /* Flexコンテナ内の要素を縦並びに */
+  }
+}
